@@ -51,4 +51,4 @@ docker run -p 4000:9000 -d --name next-app-frontend-castro next-app-frontend-cas
 
 ## You can skip all the above setup and test at:
 
-> https://l788umca3c.execute-api.us-west-2.amazonaws.com/prod/
+> https://next-technology-app.onrender.com
