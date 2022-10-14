@@ -23,9 +23,12 @@ RUN yarn run build
 RUN rm -Rf /usr/app/frontend
 COPY --from=builder /usr/app/build ./dist/src/build
 
+ARG PORT
+
 ENV NODE_ENV=production
 ENV PORT=${PORT}
 
-EXPOSE $PORT
+
+EXPOSE ${PORT}
 
 CMD ["node", "dist/src/index.js"]

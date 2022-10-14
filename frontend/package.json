@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Frontend task for NEXT technology",
   "author": "Castro Agbo <ceafive@gmail.com>",
-  "proxy": "http://localhost:8000",
+  "proxy": "http://localhost:1343",
   "private": true,
   "dependencies": {
     "@emotion/cache": "^11.10.3",

@@ -14,7 +14,12 @@ const DisplayCard = ({ result, index }: { result: Result; index: number }) => {
         <CardMedia
           component="img"
           height="194"
-          image={result?.artworkUrl100}
+          image={
+            result?.artworkUrl600 ||
+            result?.artworkUrl100 ||
+            result?.artworkUrl60 ||
+            result?.artworkUrl30
+          }
           alt={result?.trackCensoredName}
         />
         <CardContent>
@@ -34,10 +39,10 @@ const DisplayCard = ({ result, index }: { result: Result; index: number }) => {
           <Button
             size="small"
             onClick={() => {
-              window.open(result.trackViewUrl);
+              window.open(result.previewUrl);
             }}
           >
-            Learn More
+            Preview
           </Button>
         </CardActions>
       </>
