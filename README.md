@@ -16,7 +16,7 @@ A frontend app in React to display search results from an Apple search api. Expr
 In your project directory, run
 
 ```sh
-docker build --build-arg PORT=9000 NODE_ENV=development --tag next-app-frontend-castro:latest .
+docker build --build-arg PORT=9000 --tag next-app-frontend-castro:latest .
 ```
 
 ### Step 2: Verify Image
