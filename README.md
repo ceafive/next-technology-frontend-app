@@ -27,7 +27,7 @@ When build is complete you can verify your image with:
 docker images
 ```
 
-Then run your image with (make sure port 4000 and 9000 are free on your local machine):
+Then run your image with (make sure port 4000 is free on your local machine):
 
 ```sh
 docker run -p 4000:9000 -d --name next-app-frontend-castro next-app-frontend-castro
