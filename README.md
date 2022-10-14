@@ -74,26 +74,4 @@ The endpoint for getting the search results is `localhost:4000/api/search?search
 
 ## You can skip all the above setup and test the deploy prod endpoints at:
 
-```sh
-curl -i https://l788umca3c.execute-api.us-west-2.amazonaws.com/prod/
-```
-
-> Please note, you require a `X-ID` header in other to identify the current user. Possible values are listed above
-
-```sh
-curl https://l788umca3c.execute-api.us-west-2.amazonaws.com/prod/streams -H "X-ID: 123"
-```
-
-# Scaling strategy
-
-This api uses AWS Lambda, Lambda automatically scales out for incoming requests, if all existing execution contexts (lambda instances) are busy. Also we can use AWS Lambda with an Application Load Balancer,
-
-We can also use Application Auto Scaling. Application Auto Scaling allows us to configure automatic scaling for different resources, including Provisioned Concurrency for Lambda. We can scale resources based on a specific CloudWatch metric or at a specific date and time.
-
-# Logging & monitoring
-
-This api implements `CloudWatch` logs to help in logging and monitoring at scale. The api uses `winston-cloudwatch` to send specific logs to `CloudWatch` under a log group name.
-
-The `Log Group Name` is unique and the `Log Streams Name` is also unique to aid in filtering and setting metrics.
-
-Every other `stdout` goes to to a different `Log Group`
+> https://l788umca3c.execute-api.us-west-2.amazonaws.com/prod/
