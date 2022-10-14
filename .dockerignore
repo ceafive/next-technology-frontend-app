@@ -2,3 +2,13 @@ node_modules
 dist
 .env*
 .git
+
+
+Dockerfile*
+Dockerfile2
+.dockerignore
+.gitignore
+client/node_modules
+**/*/node_modules
+docker*
+# client

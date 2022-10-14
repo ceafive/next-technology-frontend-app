@@ -1,8 +1,8 @@
 {
-  "name": "node-express-typescript-starter-2022",
+  "name": "next-frontend-technical-task-server",
   "version": "1.0.0",
-  "description": "A minimally opinionated typescript & express starter for 2022",
-  "author": "Carter Adams <carteradams@protonmail.com>",
+  "description": "Frontend task for NEXT technology",
+  "author": "Castro Agbo <ceafive@gmail.com>",
   "license": "MIT",
   "main": "dist/src/index.js",
   "scripts": {
@@ -11,9 +11,11 @@
     "dev": "ts-node-dev --watch .env, src src/index.ts",
     "test": "cross-env NODE_ENV=test jest",
     "test:watch": "cross-env NODE_ENV=test jest --watch",
-    "lint": "npx eslint src"
+    "lint": "npx eslint src",
+    "docker-build": "docker build --tag next-app:latest ."
   },
   "dependencies": {
+    "axios": "^1.1.2",
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
