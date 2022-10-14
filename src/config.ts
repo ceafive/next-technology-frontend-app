@@ -11,7 +11,6 @@ const config = {
   name: packageJson.name,
   description: packageJson.description,
   appleSearchBaseURI: "https://itunes.apple.com",
-
   nodeEnv: process.env["NODE_ENV"] ?? "development",
   port: process.env["PORT"] ?? 8000,
 };
