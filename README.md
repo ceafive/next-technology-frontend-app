@@ -27,7 +27,7 @@ Once you have each of these, you're all set!
 In your project directory, run
 
 ```sh
-docker build --tag next-app-frontend-castro:latest .
+docker build --build-arg PORT=9000 --tag next-app-frontend-castro:latest .
 ```
 
 ### Step 2: Verify Image
