@@ -26,7 +26,6 @@ COPY --from=builder /usr/app/build ./dist/src/build
 ENV NODE_ENV=production
 ENV PORT=${PORT}
 
-
 EXPOSE $PORT
 
 CMD ["node", "dist/src/index.js"]

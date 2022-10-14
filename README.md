@@ -9,25 +9,14 @@ A frontend app in React to display search results from an Apple search api. Expr
 
 ## 🤔 How do I use this?
 
-<details>
 <summary>Hey- before you actually use this, make sure you've [Docker](https://www.docker.com/) installed and running. Expand to read more</summary>
-<br>
-### 🚨 ENV VARS
-
-This project uses environment variables, but if you are using docker you can ignore these as they have already been set
-
-1. PORT
-
-Once you have each of these, you're all set!
-
-</details>
 
 ### Step 1: Build Image
 
 In your project directory, run
 
 ```sh
-docker build --build-arg PORT=9000 --tag next-app-frontend-castro:latest .
+docker build --build-arg PORT=9000 NODE_ENV=development --tag next-app-frontend-castro:latest .
 ```
 
 ### Step 2: Verify Image

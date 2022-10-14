@@ -12,7 +12,7 @@
     "test": "cross-env NODE_ENV=test jest",
     "test:watch": "cross-env NODE_ENV=test jest --watch",
     "lint": "npx eslint src",
-    "docker-build": "docker build --tag next-app:latest .",
+    "docker-build": "docker build --build-arg PORT=9000 NODE_ENV=development --tag next-app-frontend-castro:latest .",
     "vercel-build": "yarn run build && cd frontend && yarn run build && mv ./build ../dist/src"
   },
   "dependencies": {
