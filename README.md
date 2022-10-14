@@ -45,33 +45,10 @@ Then run your image with (make sure port 4000 is free on your local machine):
 docker run -p 4000:9000 -d --name next-app-frontend-castro next-app-frontend-castro
 ```
 
-### Step 3: Follow Logs
+### Step 3: Open in browser
 
-#### Run following commands to follow logs
+> http://localhost:4000
 
-```sh
-docker ps
-docker logs next-app-frontend-castro
-```
-
-#### If you need to go inside the container you can use the exec command:
-
-```sh
-docker exec -it next-app-frontend-castro /bin/bash
-```
-
-### Step 4: Open Postman and try out the api
-
-First do a curl
-
-```sh
-curl -i localhost:4000/health
-```
-
-You should get a `HEALTHY!!!!!` response. You can open Postman (to make it easier) and test your the api
-
-The endpoint for getting the search results is `localhost:4000/api/search?searchTerm=burna`
-
-## You can skip all the above setup and test the deploy prod endpoints at:
+## You can skip all the above setup and test at:
 
 > https://l788umca3c.execute-api.us-west-2.amazonaws.com/prod/
