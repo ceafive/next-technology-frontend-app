@@ -5,23 +5,11 @@ import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { Result } from "../features/app/appSlice";
-import { CardMedia } from "@mui/material";
 
 const DisplayCard = ({ result, index }: { result: Result; index: number }) => {
   return (
     <Card data-testid={`card-display-${index}`}>
       <>
-        <CardMedia
-          component="img"
-          height="194"
-          image={
-            result?.artworkUrl600 ||
-            result?.artworkUrl100 ||
-            result?.artworkUrl60 ||
-            result?.artworkUrl30
-          }
-          alt={result?.trackCensoredName}
-        />
         <CardContent>
           <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
             {result?.artistName}
@@ -42,7 +30,7 @@ const DisplayCard = ({ result, index }: { result: Result; index: number }) => {
               window.open(result.previewUrl);
             }}
           >
-            Preview
+            Download Preview
           </Button>
         </CardActions>
       </>

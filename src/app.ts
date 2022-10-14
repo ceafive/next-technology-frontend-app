@@ -18,9 +18,7 @@ app.use(helmet());
 app.use(morgan("tiny"));
 
 // Apply routes before error handling
-app.use("/health", (_, res) => {
-  res.status(200).send("HEALTHY!!!!!");
-});
+app.use("/health", (_, res) => res.status(200).send("HEALTHY!!!!!"));
 app.use("/api", root);
 
 if (config.nodeEnv === "production") {
