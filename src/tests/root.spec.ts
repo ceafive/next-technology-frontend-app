@@ -5,10 +5,6 @@ import app from "../app";
 import config from "../config";
 
 describe("root endpoint get and post", () => {
-  afterEach(() => {
-    process.env["NODE_ENV"] = "test";
-  });
-
   test("test config", () => {
     expect(config.nodeEnv).toEqual("test");
     expect(config.port).toEqual("8000");
@@ -17,7 +13,7 @@ describe("root endpoint get and post", () => {
   test("get root returns 200 and data", async () => {
     const result = await supertest(app).get("/health");
     expect(result.statusCode).toEqual(200);
-    expect(result.body).toBeTruthy();
+    expect(result.text).toEqual("HEALTHY!!!!!");
   });
 
   test("search for burna boy", async () => {

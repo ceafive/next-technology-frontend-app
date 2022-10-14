@@ -19,7 +19,7 @@ app.use(morgan("tiny"));
 
 // Apply routes before error handling
 app.use("/health", (_, res) => {
-  res.status(200).send("HEALTHY!!!!! ");
+  res.status(200).send("HEALTHY!!!!!");
 });
 app.use("/api", root);
 
