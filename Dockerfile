@@ -24,6 +24,8 @@ RUN rm -Rf /usr/app/frontend
 COPY --from=builder /usr/app/build ./dist/src/build
 
 ENV NODE_ENV=production
+ENV PORT=${PORT}
+
 
 EXPOSE $PORT
 

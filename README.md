@@ -17,7 +17,6 @@ A frontend app in React to display search results from an Apple search api. Expr
 This project uses environment variables, but if you are using docker you can ignore these as they have already been set
 
 1. PORT
-2. NODE_ENV
 
 Once you have each of these, you're all set!
 
